@@ -18,7 +18,7 @@ from pathlib import Path
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import traceback
 
-VERSION = "2025-05-31"
+VERSION = "2025-07-01"
 DEFAULT_DAYS = 7
 DEFAULT_NCDAYS = 0
 DEFAULT_NCSDAYS = 0
@@ -513,7 +513,7 @@ class Zap2XML:
             self.session = requests.Session()
             self.session.verify = False
             self.session.headers.update({
-                'User-Agent': 'Mozilla/4.0', 
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0', 
                 'Accept-Encoding': 'gzip'
             })
             if self.proxy:
