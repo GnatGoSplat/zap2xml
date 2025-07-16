@@ -486,7 +486,7 @@ class Zap2XML:
                     zstart = str(ms)[:-3]
                     params = f"?time={zstart}&timespan={self.gridHours}&pref={self.zapPref}&"
                     params += self.get_zap_g_params()
-                    params += '&TMSID=&AffiliateID=gapzap&FromPage=TV%20Grid'
+                    params += '&TMSID=&AffiliateID=lat&FromPage=TV%20Grid'
                     params += '&ActivityID=1&OVDID=&isOverride=true'
                     rs = self.get_url(f"{self.urlRoot}api/grid{params}", True)
                     if not rs:
@@ -680,7 +680,7 @@ class Zap2XML:
         params['countryCode'] = self.country
         params['headendId'] = self.lineupId
         params['device'] = self.device
-        params['aid'] = 'gapzap'
+        params['aid'] = 'lat'
         return params
 
     def get_z_token(self):
